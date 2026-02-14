@@ -7,7 +7,26 @@
     <title>patterns</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="app">
+      <div class="choose-car">
+        <span class="choose-car__title"
+          >Выберите тип автомобиля для загрузки</span
+        >
+        <button class="choose-car__taxi-button">Такси</button>
+        <button class="choose-car__bus-button">Автобус</button>
+        <span class="choose-car__chosen-title">Выбранный автомобиль: </span>
+        <span class="choose-car__chosen-car"></span>
+      </div>
+      <div class="choose-driver">
+        <span class="choose-driver__title">Выберите водителя для загрузки</span>
+        <button class="choose-driver__taxi-button">Такси</button>
+        <button class="choose-driver__bus-button">Автобус</button>
+        <span class="choose-driver__chosen-title">Выбранный водитель: </span>
+        <span class="choose-driver__chosen-driver"></span>
+      </div>
+      <button class="load-driver">Загрузить водителя</button>
+      <button class="load-passenger">Загрузить пассажира</button>
+    </div>
+    <script type="module" src="/src/lab_1/main.ts"></script>
   </body>
 </html>
