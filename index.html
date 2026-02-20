@@ -4,29 +4,67 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>patterns</title>
+    <title>Лабораторная 2: Строитель</title>
+    <style>
+      #app {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+      .panel {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+      }
+      button {
+        margin: 0.25rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+      .info {
+        background: #f0f0f0;
+        padding: 0.5rem;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
-      <div class="choose-car">
-        <span class="choose-car__title"
-          >Выберите тип автомобиля для загрузки</span
-        >
-        <button class="choose-car__taxi-button">Такси</button>
-        <button class="choose-car__bus-button">Автобус</button>
-        <span class="choose-car__chosen-title">Выбранный автомобиль: </span>
-        <span class="choose-car__chosen-car"></span>
+      <h1>🚍 Подготовка автобусов и такси</h1>
+
+      <div class="panel">
+        <h3>1. Выберите тип транспорта</h3>
+        <button id="chooseTaxi">🚕 Такси</button>
+        <button id="chooseBus">🚌 Автобус</button>
+        <p>Выбран: <span id="chosenVehicle">—</span></p>
       </div>
-      <div class="choose-driver">
-        <span class="choose-driver__title">Выберите водителя для загрузки</span>
-        <button class="choose-driver__taxi-button">Такси</button>
-        <button class="choose-driver__bus-button">Автобус</button>
-        <span class="choose-driver__chosen-title">Выбранный водитель: </span>
-        <span class="choose-driver__chosen-driver"></span>
+
+      <div class="panel">
+        <h3>2. Выберите водителя</h3>
+        <button id="chooseTaxiDriver">🚕 Водитель такси (кат. такси)</button>
+        <button id="chooseBusDriver">
+          🚌 Водитель автобуса (кат. автобус)
+        </button>
+        <p>Выбран: <span id="chosenDriver">—</span></p>
       </div>
-      <button class="load-driver">Загрузить водителя</button>
-      <button class="load-passenger">Загрузить пассажира</button>
+
+      <div class="panel">
+        <h3>3. Добавьте пассажиров</h3>
+        <button id="addAdult">🧑 Взрослый</button>
+        <button id="addPreferential">👴 Льготный</button>
+        <button id="addChild">🧒 Ребёнок</button>
+        <p>Пассажиров добавлено: <span id="passengerCount">0</span></p>
+        <div class="info" id="passengerList"></div>
+      </div>
+
+      <div class="panel">
+        <h3>4. Построить и отправить</h3>
+        <button id="buildAndDepart">🔧 Построить и проверить готовность</button>
+        <button id="reset">🔄 Сбросить всё</button>
+        <div class="info" id="result"></div>
+      </div>
     </div>
-    <script type="module" src="/src/lab_1/main.ts"></script>
+    <script type="module" src="/src/lab_2/main.ts"></script>
   </body>
 </html>
