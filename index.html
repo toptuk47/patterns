@@ -1,70 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Лабораторная 2: Строитель</title>
+    <title>Proxy Pattern – Лабораторная работа</title>
     <style>
-      #app {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-family: sans-serif;
-        max-width: 800px;
-        margin: 2rem auto;
       }
-      .panel {
+      canvas {
         border: 1px solid #ccc;
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 8px;
-      }
-      button {
-        margin: 0.25rem;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-      }
-      .info {
-        background: #f0f0f0;
-        padding: 0.5rem;
-        border-radius: 4px;
+        margin-top: 20px;
+        cursor: grab;
       }
     </style>
   </head>
   <body>
-    <div id="app">
-      <h1>🚍 Подготовка автобусов и такси</h1>
-
-      <div class="panel">
-        <h3>1. Выберите тип транспорта</h3>
-        <button id="chooseTaxi">🚕 Такси</button>
-        <button id="chooseBus">🚌 Автобус</button>
-        <p>Выбран: <span id="chosenVehicle">—</span></p>
-      </div>
-
-      <div class="panel">
-        <h3>2. Выберите водителя</h3>
-        <button id="chooseTaxiDriver">🚕 Водитель такси (кат. такси)</button>
-        <button id="chooseBusDriver">
-          🚌 Водитель автобуса (кат. автобус)
-        </button>
-        <p>Выбран: <span id="chosenDriver">—</span></p>
-      </div>
-
-      <div class="panel">
-        <h3>3. Добавьте пассажиров</h3>
-        <button id="addAdult">🧑 Взрослый</button>
-        <button id="addPreferential">👴 Льготный</button>
-        <button id="addChild">🧒 Ребёнок</button>
-        <p>Пассажиров добавлено: <span id="passengerCount">0</span></p>
-        <div class="info" id="passengerList"></div>
-      </div>
-
-      <div class="panel">
-        <h3>4. Построить и отправить</h3>
-        <button id="buildAndDepart">🔧 Построить и проверить готовность</button>
-        <button id="reset">🔄 Сбросить всё</button>
-        <div class="info" id="result"></div>
-      </div>
-    </div>
-    <script type="module" src="/src/lab_2/main.ts"></script>
+    <h2>Графический редактор</h2>
+    <p>
+      Левой кнопкой перетаскивается бокс. Двойной правый клик по боксу загружает
+      изображение <strong>TestImage</strong>.
+    </p>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="/src/lab_4/main.ts"></script>
   </body>
 </html>
